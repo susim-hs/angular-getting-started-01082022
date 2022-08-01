@@ -1,0 +1,38 @@
+<!--
+  Update application to show the product list
+-->
+
+<h2>Products</h2>
+<!--*ngFor (structural directive) - repeat items in the list-->
+<div *ngFor="let product of products">
+  <h3>
+    <!--[] - property binding to use property value in the expression-->
+    <a [title]="product.name + ' details'">
+      <!--{{}} - interpolation syntax, render the property value as text.-->
+      {{ product.name }}
+    </a>
+  </h3>
+
+<!--*ngIf directive - only execute if condition true-->
+  <p *ngIf="product description">
+    Description: {{product.description}}
+  </p>
+
+  <!--() - event binding, wrap around the event ie.(click)-->
+  <button type="button" (click)="share()">
+    Share
+  </button>
+
+<!--product alert element-->
+  <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()">
+  </app-product-alerts>
+</div>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
